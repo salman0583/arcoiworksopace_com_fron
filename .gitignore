@@ -1,0 +1,42 @@
+# ================================================================
+# ARCO Workplace — Frontend (React + TypeScript + Vite) .gitignore
+# ================================================================
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production Build Output
+dist/
+dist-ssr/
+build/
+out/
+
+# Vite Cache
+.vite/
+
+# Environment & Secrets
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+
+# NPM / Yarn / PNPM Debug Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing & Coverage
+coverage/
+.nyc_output/
+
+# Editor & OS Artifacts
+.DS_Store
+Thumbs.db
+*.local

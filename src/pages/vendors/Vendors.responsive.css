@@ -1,0 +1,214 @@
+﻿/* ARCO Workplace — Vendors & Contracts Scoped Responsive Stylesheet */
+
+/* ==========================================================================
+   1. VENDORS KPI SUMMARY CARDS GRID
+   ========================================================================== */
+.vendors-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 1024px) {
+  .vendors-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .vendors-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+/* ==========================================================================
+   2. VENDORS TABLE VIEWPORT & GEOMETRY
+   ========================================================================== */
+.vendors-table-viewport {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.vendors-table-viewport::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.vendors-table-viewport::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+.vendors-table-viewport::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+.vendors-table-viewport::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+.vendors-table {
+  width: 100%;
+  min-width: 1080px;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+  font-size: 13px;
+}
+
+.vendors-table tr {
+  background-color: #FFFFFF;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.vendors-table tr:hover {
+  background-color: #F8FAFC !important;
+}
+
+.vendors-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #E5E9F0;
+  vertical-align: middle;
+}
+
+/* Sticky Col 1: Vendor Name */
+.vendor-col-sticky-1 {
+  position: sticky;
+  left: 0;
+  z-index: 4;
+  background-color: inherit;
+  width: 220px;
+  min-width: 220px;
+  max-width: 220px;
+}
+
+/* Sticky Col 2: Vendor Type */
+.vendor-col-sticky-2 {
+  position: sticky;
+  left: 220px;
+  z-index: 4;
+  background-color: inherit;
+  width: 160px;
+  min-width: 160px;
+  max-width: 160px;
+  border-right: 1px solid #E5E9F0 !important;
+  box-shadow: 4px 0 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Contracts Table Viewport */
+.contracts-table-viewport {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.contracts-table-viewport::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.contracts-table-viewport::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+.contracts-table-viewport::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+/* ==========================================================================
+   3. VENDOR DETAIL RESPONSIVE LAYOUT
+   ========================================================================== */
+.vendor-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 1024px) {
+  .vendor-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   4. ADD VENDOR MODAL ERGONOMICS
+   ========================================================================== */
+.add-vendor-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 20px;
+}
+
+.add-vendor-modal-dialog {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 720px;
+  max-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #E5E9F0;
+}
+
+.add-vendor-modal-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #E5E9F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F8FAFC;
+  flex-shrink: 0;
+}
+
+.add-vendor-modal-body {
+  overflow-y: auto;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+
+.add-vendor-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid #E5E9F0;
+  padding: 14px 24px;
+  background-color: #F8FAFC;
+  flex-shrink: 0;
+}
+
+.add-vendor-form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.add-vendor-form-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .add-vendor-form-grid-2,
+  .add-vendor-form-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

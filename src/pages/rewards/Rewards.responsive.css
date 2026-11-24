@@ -1,0 +1,166 @@
+﻿/* ARCO Workplace — Rewards & Recognition Scoped Responsive Stylesheet */
+
+/* ==========================================================================
+   1. REWARDS KPI SUMMARY CARDS GRID
+   ========================================================================== */
+.rewards-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 1024px) {
+  .rewards-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .rewards-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+/* ==========================================================================
+   2. REWARDS TABLE VIEWPORT & GEOMETRY
+   ========================================================================== */
+.rewards-table-viewport {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rewards-table-viewport::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.rewards-table-viewport::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+.rewards-table-viewport::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+.rewards-table-viewport::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+.rewards-table {
+  width: 100%;
+  min-width: 1010px;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+  font-size: 13px;
+}
+
+.rewards-table tr {
+  background-color: #FFFFFF;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.rewards-table tr:hover {
+  background-color: #F8FAFC !important;
+}
+
+.rewards-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #E5E9F0;
+  vertical-align: middle;
+}
+
+/* Sticky Column 1: Program Name */
+.reward-col-sticky-1 {
+  position: sticky;
+  left: 0;
+  z-index: 4;
+  background-color: inherit;
+  width: 220px;
+  min-width: 220px;
+  max-width: 220px;
+}
+
+/* Sticky Column 2: Program Type */
+.reward-col-sticky-2 {
+  position: sticky;
+  left: 220px;
+  z-index: 4;
+  background-color: inherit;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  border-right: 1px solid #E5E9F0 !important;
+  box-shadow: 4px 0 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* ==========================================================================
+   3. RECIPIENT DISTRIBUTION SELECTION BOX
+   ========================================================================== */
+.distribute-recipients-box {
+  max-height: 240px;
+  overflow-y: auto;
+  border: 1px solid #E5E9F0;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  -webkit-overflow-scrolling: touch;
+}
+
+.distribute-recipients-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.distribute-recipients-box::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+
+.distribute-recipients-box::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+.distribute-recipient-row {
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #F5F7FA;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+}
+
+.distribute-recipient-row:hover {
+  background-color: #F8FAFC;
+}
+
+.distribute-recipient-row.selected {
+  background-color: #F0F7FF;
+}
+
+/* ==========================================================================
+   4. FORM GRIDS
+   ========================================================================== */
+.rewards-form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.rewards-form-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .rewards-form-grid-2,
+  .rewards-form-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
